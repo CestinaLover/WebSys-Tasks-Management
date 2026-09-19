@@ -14,6 +14,8 @@
     <a href="<?= base_url('/about') ?>">About</a>
 </nav>
 
+<h2>All Tasks</h2>
+
 <table border="1">
     <tr>
         <th>Title</th>

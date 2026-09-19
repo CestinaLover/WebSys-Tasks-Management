@@ -14,8 +14,10 @@
     <a href="<?= base_url('/about') ?>">About</a>
 </nav>
 
-<p>Tasks for Today Management System</p>
+<h2>Tasks for Today Management System</h2>
+
 <p>Developed by Aldous Exequiel S. Damaso</p>
+<p>IT0049 - Web System Technologies</p>
 
 </body>
 </html>

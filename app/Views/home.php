@@ -16,13 +16,25 @@
 
 <h2>Today's Tasks</h2>
 
-<?php foreach ($tasks as $task): ?>
-    <p>
-        <strong><?= esc($task['title']) ?></strong><br>
-        Status: <?= esc($task['status']) ?><br>
-        Date: <?= esc($task['task_date']) ?>
-    </p>
-<?php endforeach; ?>
+<?php if (empty($tasks)): ?>
+    <p>No tasks for today.</p>
+<?php else: ?>
+    <table border="1">
+        <tr>
+            <th>Title</th>
+            <th>Status</th>
+            <th>Date</th>
+        </tr>
+
+        <?php foreach ($tasks as $task): ?>
+            <tr>
+                <td><?= esc($task['title']) ?></td>
+                <td><?= esc($task['status']) ?></td>
+                <td><?= esc($task['task_date']) ?></td>
+            </tr>
+        <?php endforeach; ?>
+    </table>
+<?php endif; ?>
 
 </body>
 </html>
