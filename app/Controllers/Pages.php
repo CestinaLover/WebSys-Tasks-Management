@@ -10,9 +10,14 @@ class Pages extends BaseController
     {
         $taskModel = new TaskModel();
 
-        $tasks = $taskModel->findAll();
+        $tasks = $taskModel
+            ->where('task_date', date('Y-m-d'))
+            ->orderBy('task_date', 'ASC')
+            ->findAll();
 
-        return '<pre>' . print_r($tasks, true) . '</pre>';
+        return view('home', [
+            'tasks' => $tasks
+        ]);
     }
 
     public function about()
