@@ -1,6 +1,6 @@
 <a name="readme-top"></a>
 
-# Tasks for Today Management System
+# Technical Summative Assessment 1: Module 1 and Module 2
 
 A simple task management system made for IT0049 - Web System Technologies using CodeIgniter 4 and MySQL.
 
