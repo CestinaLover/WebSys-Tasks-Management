@@ -8,11 +8,11 @@ class Pages extends BaseController
 {
     public function index()
     {
-        $taskModel = new TaskModel();
+        $model = new TaskModel();
 
-        $tasks = $taskModel
+        $tasks = $model
             ->where('task_date', date('Y-m-d'))
-            ->orderBy('task_date', 'ASC')
+            ->where('is_archived', 0)
             ->findAll();
 
         return view('home', [
